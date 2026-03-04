@@ -6,6 +6,15 @@ conda create -n swin python=3.10
 conda install pytorch==2.1.0 torchvision==0.16.0 torchaudio==2.1.0 pytorch-cuda=11.8 -c pytorch -c nvidia
 pip install -r requirements.txt
 ```
+# Training script
+If you need to train x8 images, run the code:
+```
+python main_train_SwinFuSR.py --opt options/train_x8.json
+```
+If you need to train x16 images, run the code:
+```
+python main_train_SwinFuSR.py --opt options/train_x16.json
+```
 # Testing script
 If you need to test x8 images, run the code:
 ```
