@@ -36,12 +36,6 @@ def main(json_path='options/train_baseline.json'):
     # Step--1 (prepare opt)
     # ----------------------------------------
     '''
-    guide_dropout_start_iter = 500000
-    final_proba_without_rgb = 0.2
-    if hasattr(train_loader.dataset, 'proba_without_rgb'):
-            train_loader.dataset.proba_without_rgb = 0.0
-            if opt['rank'] == 0:
-                logger.info(f'Initial Guide Dropout Probability: 0.0')
 
     parser = argparse.ArgumentParser()
     parser.add_argument('--opt', type=str, default=json_path, help='Path to option JSON file.')
@@ -166,7 +160,12 @@ def main(json_path='options/train_baseline.json'):
     # Step--3 (initialize model)
     # ----------------------------------------
     '''
-
+    guide_dropout_start_iter = 500000
+    final_proba_without_rgb = 0.2
+    if hasattr(train_loader.dataset, 'proba_without_rgb'):
+            train_loader.dataset.proba_without_rgb = 0.0
+            if opt['rank'] == 0:
+                logger.info(f'Initial Guide Dropout Probability: 0.0')
     model = define_Model(opt)
     model.init_train()
 
