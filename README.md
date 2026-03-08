@@ -24,5 +24,8 @@ If you need to test x16 images, run the code:
 ```
 python test_SwinRGF.py --opt exp/test_x16.json
 ```
+# Pre-trained Model Weights
+x8 pre-trained model weights: [x8_E.pth](https://pan.baidu.com/s/1oGkXQwqB0ZRIeOhKsRbWGg?pwd=vi4g )  
+x16 pre-trained model weights: [x16_E.pth](https://pan.baidu.com/s/1OLZdex5AySNtpbnkQBqAGg?pwd=s2hs )
 # Acknowledgement
 Most of the code is based on the work of [SwinFuSR](https://github.com/VisionICLab/SwinFuSR) , modifying the `test_swinFuSR.py` code, and splitting the test scripts in the `options` folder into `test_swinFuSR_x8.json` and `test_swinFuSR_x16.json`.thanks to the team for their inspiration!
